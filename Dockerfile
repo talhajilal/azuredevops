@@ -25,7 +25,7 @@ WORKDIR /hello_app
 
 # Copy the app contents to the image
 COPY . /hello_app
-
+RUN cat /hello_app/webapp.py
 # If you have additional requirements beyond Flask (which is included in the
 # base image), generate a requirements.txt file with pip freeze and uncomment
 # the next three lines.
