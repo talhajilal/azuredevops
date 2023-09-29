@@ -31,6 +31,18 @@ steps:
     pytest
   displayName: 'pytest'
 
+trigger:
+- master # or the name of your main branch
+- feature/*
+
+steps:
+# Prepare Analysis Configuration task
+- task: SonarQubePrepare@5
+  inputs:
+    SonarQube: 'YourSonarqubeServerEndpoint'
+    scannerMode: 'CLI'
+    configMode: 'manual'
+    cliProjectKey: 'YourProjectKey'
 
 # Run Code Analysis task
 - task: SonarQubeAnalyze@5
