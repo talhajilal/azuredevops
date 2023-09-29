@@ -37,10 +37,10 @@ steps:
 # Prepare Analysis Configuration task
 - task: SonarQubePrepare@5
   inputs:
-    SonarQube: 'YourSonarqubeServerEndpoint'
+    SonarQube: 'https://sonarcloud.io/'
     scannerMode: 'CLI'
-    configMode: 'manual'
-    cliProjectKey: 'YourProjectKey'
+    configMode: 'automatic'
+    cliProjectKey: '6b51f9f21f68399b96b88efd9598730c13d06fce'
 
 # Run Code Analysis task
 - task: SonarQubeAnalyze@5
